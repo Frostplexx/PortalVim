@@ -55,7 +55,7 @@ if [[ $REPLY =~ ^[iI]$ ]]; then
     
         sudo export PATH=$PATH:/mnt/nvim/usr/bin/bin
     
-        ln -s /mnt/nvim/usr/bin/nvim /usr/bin/nvim
+        ln -s /mnt/nvim/etc/nvim ~/.config/nvim
     
         echo "Setting up aliases for nvim"
         alias v=nvim
