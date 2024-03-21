@@ -36,9 +36,16 @@ else
     echo "Downloading Linux SquashFS"
     curl -L $LINUX_SQUASHFS -o nvim-linux.squashfs
 
+    # check if unsquashfs is installed
+    if ! [ -x "$(command -v unsquashfs)" ]; then
+        echo "Error: unsquashfs is not installed." >&2
+        echo "Please install squashfs-tools" >&2
+        exit 1
+    fi
+
     echo "Extracting Linux SquashFS into mounted directory"
     sudo mkdir -p /mnt/nvim
-    sudo mount -o loop nvim-linux.squashfs /mnt/nvim
+    sudo unsquashfs -d /mnt/nvim nvim-linux.squashfs
 
     echo "Temporarily adding nvim to PATH"
 
