@@ -26,7 +26,7 @@ echo " | |__) |__  _ __| |_ __ _| |\ \  / / _ _ __ ___  "
 echo " |  ___/ _ \|  __| __/ _  | | \ \/ / | |  _   _ \ "
 echo " | |  | (_) | |  | || (_| | |  \  /  | | | | | | |"
 echo " |_|   \___/|_|   \__\__,_|_|   \/   |_|_| |_| |_|"
-echo ""
+echo "A temporary, portable, and disposable neovim environment"
 echo ""
 echo ""
 echo ""
@@ -60,6 +60,8 @@ if [[ $REPLY =~ ^[iI]$ ]]; then
         echo "Setting up aliases for nvim"
         alias v=nvim
         alias vim=nvim
+
+        echo "Installation complete!"
     
     fi
 elif [[ $REPLY =~ ^[uU]$ ]]; then
