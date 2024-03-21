@@ -53,7 +53,7 @@ if [[ $REPLY =~ ^[iI]$ ]]; then
     
         echo "Temporarily adding nvim to PATH"
     
-        sudo export PATH=$PATH:/mnt/nvim/usr/bin/bin
+        export PATH=$PATH:/mnt/nvim/usr/bin/bin
     
         ln -s /mnt/nvim/etc/nvim ~/.config/nvim
     

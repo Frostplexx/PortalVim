@@ -17,5 +17,5 @@ else
     sudo rm ~/.config/nvim
     sudo rm -r /mnt/nvim
     sudo rm ~/nvim-linux.squashfs
-    echo "Uninstall complete"
+    echo "Please reboot for the uninstallation to complete"
 fi
