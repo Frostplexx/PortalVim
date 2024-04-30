@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PortalVim</title>
+</head>
+<style>
+    .copy-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .copy-link-input {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .copy-link-button {
+        padding: 10px;
+        margin: 0 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="copy-link">
+        <input type="text" class="copy-link-input" value="" disabled="true">
+        <button type="button" class="copy-link-button">
+            <span class="material-icons" onclick="copy()">Copy</span>
+        </button>
+    </div>
+    <script>
+        const copyLinkInput = document.querySelector('.copy-link-input');
+        function copy() {
+            copyLinkInput.select();
+            document.execCommand("copy");
+            console.log(copyLinkInput.value);
+        }
+
+        //set the url of the input to the current url
+        copyLinkInput.value = `source <(curl -s ${window.location.protocol}//${window.location.host}/setup.sh)`;
+    </script>
+</body>
+
+</html>

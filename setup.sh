@@ -32,6 +32,7 @@ echo ""
 echo ""
 
 read -p "Do you want to (i)nstall or (u)ninstall PortalVim?: " -n 1 -r
+
 echo
 if [[ $REPLY =~ ^[iI]$ ]]; then
     if [ "$IS_MAC" = true ]; then
